@@ -15,6 +15,6 @@ app.add_middleware(
 class User(BaseModel):
     username: str
 
-@app.post('/authenticate')
-async def authenticate(user: User):
-    return {}
+@app.get('/')
+async def authenticate():
+    return {"this": "that"}
